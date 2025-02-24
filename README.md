@@ -11,5 +11,5 @@ The macro can be customized to use any key combination for activation (default: 
 To have this program run on startup open a shell in the folder containing the script and run the following command:
 
 ```
-New-ItemProperty -Path "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run" -Name "Keyboard_Paste" -PropertyType String -Value "powershell.exe -executionpolicy bypass -file `"$((get-item -path "Keyboard_Paste.ps1").FullName)`""
+New-ItemProperty -Path "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run" -Name "Keyboard_Paste" -PropertyType String -Value "powershell.exe -executionpolicy bypass -windowstyle hidden -file `"$((get-item -path "Keyboard_Paste.ps1").FullName)`""
 ```
